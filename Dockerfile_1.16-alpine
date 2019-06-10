@@ -1,0 +1,5 @@
+FROM nginx:1.16-alpine
+
+COPY ./nginx.conf /etc/nginx/sites-enabled/default
+
+WORKDIR /var/www
