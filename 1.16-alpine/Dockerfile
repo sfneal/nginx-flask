@@ -7,4 +7,4 @@ EXPOSE 4000
 # /etc/nginx/nginx.conf includes
 RUN rm /etc/nginx/conf.d/default.conf
 
-COPY app.conf /etc/nginx/conf.d
+COPY ../1.17-alpine/app.conf /etc/nginx/conf.d
