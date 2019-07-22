@@ -4,4 +4,5 @@ FROM nginx:1.17-alpine
 EXPOSE 4000
 
 # Copy default nginx config
+COPY ./nginx.conf/ /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
