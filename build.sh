@@ -8,3 +8,5 @@ docker build -t stephenneal/nginx-flask:1.17-alpine "${DIR}"/1.17-alpine/
 docker build -t stephenneal/nginx-flask:1.17-alpine-v2 "${DIR}"/1.17-alpine-v2/
 docker build -t stephenneal/nginx-flask:1.17-alpine-v3 "${DIR}"/1.17-alpine-v3/
 docker build -t stephenneal/nginx-flask:1.17-alpine-v4 "${DIR}"/1.17-alpine-v4/
+docker build -t stephenneal/nginx-flask:1.18-alpine-v1 "${DIR}"/1.18-alpine-v1/
+docker build -t stephenneal/nginx-flask:1.19-alpine-v1 "${DIR}"/1.19-alpine-v1/
