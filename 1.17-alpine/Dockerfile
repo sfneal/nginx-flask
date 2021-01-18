@@ -1,4 +1,5 @@
 FROM nginx:1.17-alpine
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Nginx will listen on this port
 EXPOSE 4000
