@@ -1,6 +1,6 @@
 # stephenneal/nginx-flask
 
-[![Build Status](https://img.shields.io/travis/sfneal/nginx-flask/master.svg?style=flat-square)](https://travis-ci.org/sfneal/nginx-flask)
+[![Build Status](https://travis-ci.com/sfneal/nginx-flask.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/nginx-flask)
 [![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/nginx-flask?style=flat-square)](https://hub.docker.com/r/stephenneal/nginx-flask)
 [![Latest Version](https://img.shields.io/docker/v/stephenneal/nginx-flask?sort=semver&style=flat-square)](https://hub.docker.com/r/stephenneal/nginx-flask)
 
