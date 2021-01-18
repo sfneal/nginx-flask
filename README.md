@@ -1,38 +1,37 @@
-# stephenneal/dind
+# stephenneal/nginx-flask
 
-[![Build Status](https://img.shields.io/travis/sfneal/dind/master.svg?style=flat-square)](https://travis-ci.org/sfneal/dind)
-[![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/dind?style=flat-square)](https://hub.docker.com/r/stephenneal/dind)
-[![Latest Version](https://img.shields.io/docker/v/stephenneal/dind?style=flat-square)](https://hub.docker.com/r/stephenneal/dind)
+[![Build Status](https://img.shields.io/travis/sfneal/nginx-flask/master.svg?style=flat-square)](https://travis-ci.org/sfneal/nginx-flask)
+[![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/nginx-flask?style=flat-square)](https://hub.docker.com/r/stephenneal/nginx-flask)
+[![Latest Version](https://img.shields.io/docker/v/stephenneal/nginx-flask?sort=semver&style=flat-square)](https://hub.docker.com/r/stephenneal/nginx-flask)
 
-Docker In Docker (DIND) provides an interface for sending Docker commands between Docker containers.  The initial use case for this package was to restart 'webserver' containers after updated SSL certificates had been retrieved by a 'certbot' container
+nginx-flask is a Nginx webserver for Python Flask applications that can be configured with a few environment variables
 
 ## Installation
 
 Docker images can be pulled using the Docker CLI.
 
 ```bash
-docker pull stephenneal/dind:alpine-3.12-v1
+docker pull stephenneal/nginx-flask:1.19-alpine-v1
 ```
 
 ## Usage
 
-Add a 'docker' container with the container's Docker socket mapped to Docker socket of the host machine in order to execute Docker commands. 
+Add a 'webserver' container for your Python Flask application. 
 
 ```yaml
-docker:
-  image: stephenneal/dind:alpine-3.12-v1
-  container_name: docker
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+webserver:
+  image: stephenneal/nginx-flask:1.19-alpine-v1
+  container_name: webserver
+  ports:
+    - 5000:4000
   environment:
-    - container_name=webserver proxy
-    - container_cmd=/scripts/reload.sh
-    - wait_for_container=certbot
+    - service=api-media # Python Flask app container name
+    - port=5000
   depends_on:
-    - certbot
+    - api-media # Python Flask app container name
+  networks:
+    - app-network
 ```
-
-In this example the 'docker' container will execute the 'reload.sh' script in the 'webserver' & 'proxy' container's once the 'certbot' container has stopped running.  'dind' will check every 5 seconds to determine if the 'certbot' container has stopped.  Once it has stopped, 'dind' executes the command specified by the `container_cmd` environement variable.  After all commands have been executed, 'dind' stops running as well.
 
 ## Contributing
 
