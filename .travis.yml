@@ -9,14 +9,14 @@ env:
     - secure: hvyi4AaMe5+oTS/RJvJ7xIb/Gbj/G/EIpPAO0ZVOadlyou4Trl6a8cPDGoJANE+FuiPb5Fy9Bw/OvmxRrRry21qfbgiChW+fs39ecd6ZT38UHHHqRFj1Z84Tl5j92EUmv4OiOmyIsmd0cNJ0f81byMRIwoKJk15YOu7LuF9ZHzDIdwyqc1RGieeoXnW37puntomWOlWEV+PcAtdALFklB2Isb8F+iPMQlNGmTCHpkJ69cYmJCVc00jR2gTMD2XBc4yIZA2i1YcqSCvcm/M7yuN3FHS3DQSWBm97GEFv+PLqbhZvOF4lj4QntduEgTYjNJVxoji3en+hV+Dn6ZtM/cdp4kIJcKKxJlOzU8w4YLt7vu/68tToFj7w6uM8jlvBnS62nW0XOw+ADmP9Bf+muQwIUGk6Nfr5Aleu4GzYucslaeNIK5H6aXAnHW2zEoP19t4UTTNkJJjapWK7OnFOY3/GSCRB8iVQUgB639YQ4S8XuY+x4qi0VKG2eUliXxvzxvQHkEXcLp2NzzJPG6uB4oS3jBkcQuYg82adNwTqZrfd+AzWZDzyXFK8dRlbjVDL0vMZfsewKsguR9+X+U0vkbp1UdReADfotBF41vYNEg1CaCAJpKqt3buBuS2azyTv64oZj0srdr8TA/f+4ff5Cmwv0L8s/dDInk7bcbPrIAxI=
 
   matrix:
-    - TAG=1.16-alpine
-    - TAG=1.16-alpine-v2
-    - TAG=1.17-alpine
-    - TAG=1.17-alpine-v2
-    - TAG=1.17-alpine-v3
-    - TAG=1.17-alpine-v4
-    - TAG=1.18-alpine-v1
     - TAG=1.19-alpine-v1
+    - TAG=1.18-alpine-v1
+    - TAG=1.17-alpine-v4
+    - TAG=1.17-alpine-v3
+    - TAG=1.17-alpine-v2
+    - TAG=1.17-alpine
+    - TAG=1.16-alpine-v2
+    - TAG=1.16-alpine
 
 before_script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
