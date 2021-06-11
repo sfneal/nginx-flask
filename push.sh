@@ -25,4 +25,6 @@ if [ "$TAG" != null ]
     docker push stephenneal/nginx-flask:1.17-alpine-v4
     docker push stephenneal/nginx-flask:1.18-alpine-v1
     docker push stephenneal/nginx-flask:1.19-alpine-v1
+    docker push stephenneal/nginx-flask:1.20-alpine-v1
+    docker push stephenneal/nginx-flask:1.21-alpine-v1
 fi
