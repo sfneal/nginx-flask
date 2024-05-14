@@ -23,10 +23,10 @@ if [ "$TAG" != null ]
     docker push stephenneal/nginx-flask:1.17-alpine-v2
     docker push stephenneal/nginx-flask:1.17-alpine-v3
     docker push stephenneal/nginx-flask:1.17-alpine-v4
-    docker push stephenneal/nginx-flask:1.18-alpine-v1
-    docker push stephenneal/nginx-flask:1.19-alpine-v1
-    docker push stephenneal/nginx-flask:1.20-alpine-v1
-    docker push stephenneal/nginx-flask:1.21-alpine-v1
-    docker push stephenneal/nginx-flask:1.22-alpine-v1
-    docker push stephenneal/nginx-flask:1.23-alpine-v1
+    docker push stephenneal/nginx-flask:1.18-alpine
+    docker push stephenneal/nginx-flask:1.19-alpine
+    docker push stephenneal/nginx-flask:1.20-alpine
+    docker push stephenneal/nginx-flask:1.21-alpine
+    docker push stephenneal/nginx-flask:1.22-alpine
+    docker push stephenneal/nginx-flask:1.23-alpine
 fi
