@@ -14,9 +14,13 @@ RUN apk update && apk add \
     python3 \
     py3-pip
 
-# Upgrade PIP & install replace_domain
+# Copy python dependencies list
+COPY ./requirements.txt ./requirements.txt
+
+# Install Python dependencies
 RUN pip3 install --break-system-packages --upgrade pip \
-    && pip3 install --break-system-packages replace_domain>=1.0.5
+    && pip3 install --break-system-packages -r ./requirements.txt \
+    && rm ./requirements.txt
 
 # Copy scripts
 COPY ./scripts /scripts/
