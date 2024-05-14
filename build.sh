@@ -21,10 +21,12 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/nginx-flask:1.17-alpine-v2 "${DIR}"/1.17-alpine-v2/
     docker build -t stephenneal/nginx-flask:1.17-alpine-v3 "${DIR}"/1.17-alpine-v3/
     docker build -t stephenneal/nginx-flask:1.17-alpine-v4 "${DIR}"/1.17-alpine-v4/
-    docker build -t stephenneal/nginx-flask:1.18-alpine-v1 "${DIR}"/1.18-alpine-v1/
-    docker build -t stephenneal/nginx-flask:1.19-alpine-v1 "${DIR}"/1.19-alpine-v1/
-    docker build -t stephenneal/nginx-flask:1.20-alpine-v1 "${DIR}"/1.20-alpine-v1/
-    docker build -t stephenneal/nginx-flask:1.21-alpine-v1 "${DIR}"/1.21-alpine-v1/
-    docker build -t stephenneal/nginx-flask:1.22-alpine-v1 "${DIR}"/1.22-alpine-v1/
-    docker build -t stephenneal/nginx-flask:1.23-alpine-v1 "${DIR}"/1.23-alpine-v1/
+    docker build -t stephenneal/nginx-flask:1.18-alpine "${DIR}"/1.18-alpine/
+    docker build -t stephenneal/nginx-flask:1.19-alpine "${DIR}"/1.19-alpine/
+    docker build -t stephenneal/nginx-flask:1.20-alpine "${DIR}"/1.20-alpine/
+    docker build -t stephenneal/nginx-flask:1.21-alpine "${DIR}"/1.21-alpine/
+    docker build -t stephenneal/nginx-flask:1.22-alpine "${DIR}"/1.22-alpine/
+    docker build -t stephenneal/nginx-flask:1.23-alpine "${DIR}"/1.23-alpine/
+    docker build -t stephenneal/nginx-flask:1.24-alpine "${DIR}"/1.24-alpine/
+    docker build -t stephenneal/nginx-flask:1.25-alpine "${DIR}"/1.25-alpine/
 fi
