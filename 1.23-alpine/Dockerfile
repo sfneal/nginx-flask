@@ -1,4 +1,4 @@
-FROM nginx:1.22-alpine
+FROM nginx:1.23-alpine
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Nginx will listen on this port
