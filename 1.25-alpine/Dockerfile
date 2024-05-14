@@ -15,7 +15,8 @@ RUN apk update && apk add \
     py3-pip
 
 # Upgrade PIP & install replace_domain
-RUN pip3 install --upgrade pip && pip3 install replace_domain>=1.0.5
+RUN pip3 install --break-system-packages --upgrade pip \
+    && pip3 install --break-system-packages replace_domain>=1.0.5
 
 # Copy scripts
 COPY ./scripts /scripts/
