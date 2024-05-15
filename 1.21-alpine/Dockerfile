@@ -12,7 +12,8 @@ ENV port=5000
 RUN apk update && apk add \
     bash \
     python3 \
-    py3-pip
+    py3-pip \
+    py3-distlib
 
 # Upgrade PIP & install replace_domain
 # Copy python dependencies list
