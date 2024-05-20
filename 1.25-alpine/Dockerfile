@@ -12,7 +12,8 @@ ENV port=5000
 RUN apk update && apk add \
     bash \
     python3 \
-    py3-pip
+    py3-pip \
+    py3-packaging
 
 # Copy python dependencies list
 COPY ./requirements.txt ./requirements.txt
