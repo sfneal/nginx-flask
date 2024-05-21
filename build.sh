@@ -19,7 +19,7 @@ if [ "$TAG" != null ]
 
       TAGS=""
       while IFS= read -r line; do
-        TAGS+=" -t stephenneal/nginx-flask:${line}"
+        TAGS="${TAGS} -t stephenneal/nginx-flask:${line}"
       done < "${DIR}"/"${TAG}"/_docker-tags.txt
 
       COMMAND="docker build ${TAGS} ${DIR}/${TAG}/"
