@@ -13,6 +13,7 @@ RUN apk update && apk add \
     bash \
     python3 \
     py3-pip \
+    py3-six \
     py3-packaging
 
 # Upgrade PIP & install replace_domain
