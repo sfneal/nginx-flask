@@ -19,10 +19,10 @@ if [ "$TAG" != null ]
       echo "${TAG} directory has multiple Docker tags"
 
       while IFS= read -r line; do
-        echo docker push stephenneal/nginx-flask:"${line}"
+        docker push stephenneal/nginx-flask:"${line}"
       done < "${DIR}"/"${TAG}"/_docker-tags.txt
     else
-      echo docker push stephenneal/nginx-flask:"${TAG}"
+      docker push stephenneal/nginx-flask:"${TAG}"
     fi
 
   # Build & push all images
