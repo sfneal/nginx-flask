@@ -9,6 +9,9 @@ TAG=${1:-null}
 # Check if the TAG variable is set
 if [ "$TAG" != null ]
 
+# Optional PLATFORM argument (if none provided, both will be built)
+PLATFORM=${2:-"linux/amd64,linux/arm64"}
+
   # Only build one image
   then
     FILE="${DIR}"/"${TAG}"/_docker-tags.txt
@@ -22,11 +25,15 @@ if [ "$TAG" != null ]
         TAGS="${TAGS} -t stephenneal/nginx-flask:${line}"
       done < "${DIR}"/"${TAG}"/_docker-tags.txt
 
-      COMMAND="docker build ${TAGS} ${DIR}/${TAG}/"
+      COMMAND="docker buildx build --load ${TAGS} --platform "${PLATFORM}" ${DIR}/${TAG}/"
       echo "${COMMAND}"
       $(echo "${COMMAND}")
     else
-      docker build -t stephenneal/nginx-flask:"${TAG}" "${DIR}"/"${TAG}"/
+      docker buildx build \
+      	--load \
+      	-t stephenneal/nginx-flask:"${TAG}" \
+      	--platform "${PLATFORM}" \
+      	"${DIR}"/"${TAG}"/
     fi
 
   # Build all images
